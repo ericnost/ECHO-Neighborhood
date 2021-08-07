@@ -38,6 +38,10 @@
 	  color: white;
 	  text-decoration: none; /* no underline */
 	}
+	.download{
+		color: blue;
+		text-decoration: underline;
+	}
     .button{
 	  display: inline-block;
 	  *display: inline;
@@ -195,7 +199,7 @@
 
 		var query = 'select * from "ECHO_EXPORTER" where "FAC_LAT" > '+bbox[1].toString()+' AND "FAC_LAT" < '+bbox[3].toString()+' and "FAC_LONG" > '+bbox[0].toString()+' and "FAC_LONG" < '+bbox[2].toString()+' and "FAC_ACTIVE_FLAG"=\'Y\' ORDER BY "FAC_NAME" LIMIT 1000'
 
-		var url = 'http://portal.gss.stonybrook.edu/echoepa/?query='
+		var url = 'https://portal.gss.stonybrook.edu/echoepa/?query='
     	var data_location = url + encodeURIComponent(query) + '&pg'
     	
     	var a = document.createElement('a');
