@@ -133,6 +133,7 @@
 	<div style="width: 50%; float: left">
 		<h1>Polluters in Your Neighborhood</h1>
 		<h2>Draw a rectangle around your neighborhood using the tools below then click "Get Facilities"</h2>
+		<h3>Your map will download and you can click the link that appears to get a CSV file with facility records</h3>
 	</div>
 	<div style="width: 50%; float: right">
 		<p><br><button class='blue button'><a href="#" id='export'>Get Facilities</a></button>
@@ -203,7 +204,7 @@
 		a.setAttribute("id", "datalink");
 		// apend the anchor to the body
 		// of course you can append it almost to any other dom element
-		document.getElementsByTagName('link').appendChild(a);
+		document.getElementsById('link').appendChild(a);
 
     	//document.getElementById('datalink').click(); // simulate a click on the link
 	}
@@ -223,7 +224,6 @@
 		    document.getElementById('export').setAttribute('href', 'data:' + convertedData);
 		    document.getElementById('export').setAttribute('download','YourMap.geojson');
 
-		    console.log(document.getElementById('export'))
 		    // Server function call
 		    go2Server(data)
 	    }   
