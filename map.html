@@ -137,11 +137,10 @@
 	<div style="width: 50%; float: left">
 		<h1>Polluters in Your Neighborhood</h1>
 		<h2>Draw a rectangle around your neighborhood using the tools below then click "Get Facilities"</h2>
-		<h3>Your map will download and you can click the link that appears to get a CSV file with facility records</h3>
 	</div>
 	<div style="width: 50%; float: right">
 		<p><br><button class='blue button'><a href="#" id='export'>Get Facilities</a></button>
-		<div id="link"> </div>
+		<div class="download" id="link"> </div>
 	</div>
 </div>
 <div id="mapid" style="width: 100%; height: 70vh"></div>
@@ -205,12 +204,11 @@
     	var a = document.createElement('a');
 		a.setAttribute('href',data_location);
 		a.innerHTML = "Download Facility Data";
-		//a.setAttribute("id", "datalink");
+		a.setAttribute("id", "datalink");
 		// apend the anchor to the body
 		// of course you can append it almost to any other dom element
 		document.getElementById('link').appendChild(a);
-		console.log(a)
-    	//document.getElementById('datalink').click(); // simulate a click on the link
+    	document.getElementById('datalink').click(); // simulate a click on the link
 	}
 
 	//From https://bl.ocks.org/danswick/d30c44b081be31aea483
